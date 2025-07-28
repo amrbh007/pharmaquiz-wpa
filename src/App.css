@@ -1,38 +1,134 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+  background-color: #e0f2f7; /* Light blue background */
+  color: #333;
+  font-family: 'Arial', sans-serif;
+}
+
+.App-header {
+  margin-bottom: 2rem;
+  color: #0d47a1; /* Darker blue for header */
+}
+
+.start-screen {
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.start-button {
+  background-color: #2196f3; /* Blue */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+  background-color: #1976d2; /* Darker blue on hover */
+}
+
+.quiz-container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 90%;
+}
+
+.question-text {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: #0d47a1; /* Darker blue for questions */
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.option-button {
+  background-color: #bbdefb; /* Lighter blue for options */
+  color: #333;
+  border: 1px solid #90caf9;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  text-align: left;
+}
+
+.option-button:hover:not(:disabled) {
+  background-color: #90caf9; /* Medium blue on hover */
+}
+
+.option-button.correct {
+  background-color: #a5d6a7; /* Green for correct answer */
+  border-color: #66bb6a;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.option-button.incorrect {
+  background-color: #ef9a9a; /* Red for incorrect selected answer */
+  border-color: #e57373;
+  color: white;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.option-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.answer-section {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.feedback {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.correct-answer {
+  font-weight: bold;
+  color: #388e3c; /* Dark green */
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.explanation {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+.next-button {
+  background-color: #42a5f5; /* Medium blue */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.next-button:hover {
+  background-color: #1e88e5; /* Darker blue on hover */
 }
